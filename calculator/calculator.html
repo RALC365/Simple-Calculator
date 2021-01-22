@@ -1,0 +1,143 @@
+<div class="container " ng-controller="CalculatorController" id="principal">
+  <div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-8">
+
+      <div class="text-center">
+        <h3> Basic Calculator</h3>
+        <small>Richardson Cárcamo, Practicante en Impact Mobile</small>
+      </div>
+      <br>
+      <br>
+
+      <div class="row align-items-center">
+        <input type="text" class="form-control text-right" id="exampleFormControlInput1" ng-model="formula"
+          placeholder="0">
+      </div>
+
+      <div class="row align-items-center mt-2">
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary" ng-click="formula = formula + '('">(</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + ')'">)</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '^'">^</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-danger" ng-click="formula=''">AC</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row align-items-center mt-2">
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '9'">9</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '8'">8</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '7'">7</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '/'">/</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row align-items-center mt-2">
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '6'">6</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '5'">5</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '4'">4</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '*'">*</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center mt-2">
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '3'">3</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '2'">2</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '1'">1</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '-'">-</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center mt-2">
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '√'">√</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '0'">0</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '.'">.</button>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  ng-click="formula = formula + '+'">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center mt-2">
+        <div class="d-grid gap-2">
+          <button type="button" class="btn btn-outline-primary"  ng-click="result()">=</button>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

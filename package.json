@@ -1,0 +1,24 @@
+{
+  "name": "angular_spa",
+  "version": "1.0.0",
+  "description": "basic calculator angular nodejs expressjs app ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "bootstrap": "^4.1.1",
+    "ejs": "^2.6.1",
+    "expr-eval": "^2.0.2",
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "keywords": [
+    "angular",
+  ],
+  "author": "RALC365",
+  "license": "MIT"
+}
