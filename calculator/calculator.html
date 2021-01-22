@@ -1,4 +1,4 @@
-<div class="container " ng-controller="CalculatorController" id="principal">
+<div class="container border border-2 border-primary" ng-controller="CalculatorController" id="principal">
   <div class="row align-items-center">
     <div class="col"></div>
     <div class="col-8">
@@ -10,9 +10,17 @@
       <br>
       <br>
 
-      <div class="row align-items-center">
+      <div class="row align-items-center shadow mb-3 rounded ">
         <input type="text" class="form-control text-right" id="exampleFormControlInput1" ng-model="formula"
           placeholder="0">
+
+          <div class="alert alert-warning alert-dismissible fade show text-center" role="alert" ng-if="showAlert">
+            <strong>Sintax Error</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          
+          
       </div>
 
       <div class="row align-items-center mt-2">

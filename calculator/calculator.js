@@ -3,6 +3,7 @@ angular.module('angular-spa.calculator', [])
 .controller('CalculatorController', function ($scope) {
 
   $scope.formula=''
+  $scope.showAlert=false
   $scope.result = function() {
         //transformaremos √ -> sqrt()
         var splitA = $scope.formula.split('√')
@@ -48,7 +49,7 @@ angular.module('angular-spa.calculator', [])
         try {
             $scope.formula = math.evaluate(equationT)
         } catch (error) {
-            $scope.formula = "Sintax Error"
+            $scope.showAlert = true
         }
        };
        $scope.name = 'HomeController';
