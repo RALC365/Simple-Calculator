@@ -1,0 +1,146 @@
+<div class="container border border-2 border-primary pb-5" id="principal">
+    <div class="row align-items-center">
+      <div class="col"></div>
+      <div class="col-8">
+  
+        <div class="text-center mt-4">
+          <h2>Calculadora Algebraica</h2>
+        </div>
+        <br>
+        <br>
+        <div> 
+        <div class="row align-items-center shadow mb-1 rounded ">
+          <input type="text" class="form-control text-right" [(ngModel)]="formula"
+            placeholder="0" (ngModelChange)="changeFormula()">
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show text-center" role="alert" *ngIf="showAlert">
+          <strong>Sintax Error</strong>
+        </div>
+      </div>
+  
+        <div class="row align-items-center mt-2">
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary" (click)="addFormula('(')">(</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula(')')">)</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('^')">^</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-danger" (click)="formula=''; showAlert=false">AC</button>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="row align-items-center mt-2">
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('9')">9</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('8')">8</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('7')">7</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('/')">/</button>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="row align-items-center mt-2">
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('6')">6</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('5')">5</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('4')">4</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('*')">*</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row align-items-center mt-2">
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('3')">3</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('2')">2</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('1')">1</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('-')">-</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row align-items-center mt-2">
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('√')">√</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('0')">0</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('.')">.</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-primary"  (click)="addFormula('+')">+</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row align-items-center mt-2">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary"  (click)="result()">=</button>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
