@@ -1,0 +1,129 @@
+<div class="container border border-2 border-primary pb-5" id="principal">
+  <div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-8">
+
+      <div class="text-center mt-4">
+        <h2>Calculadora Geometrica</h2>
+      </div>
+      <br>
+      <br>
+      <div>
+        <div class="row align-items-center shadow mb-1 rounded">
+
+          <div class="col-6" >
+            <div class="d-grid gap-2 form-floating">
+              <input type="email" class="form-control" disabled id="inArea" placeholder="0"
+                [(ngModel)]="area">
+              <label for="floatingInputInvalid">Área</label>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="d-grid gap-2 form-floating">
+              <input type="email" class="form-control" disabled id="inPer" placeholder="0"
+                [(ngModel)]="perimetro">
+              <label for="floatingInputInvalid">Perimetro</label>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="alert alert-warning alert-dismissible fade show text-center" role="alert" *ngIf="showAlert">
+          <strong>{{errorMessage}}</strong>
+        </div>
+      </div>
+
+      <!-- Tabla de Botones -->
+      <div class="row align-items-center mt-2">
+
+        <!-- Fila Botones Figuras -->
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary" (click)="setBanFig(1)"><i
+                class="bi bi-circle-fill"></i></button>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="btn-group d-grid gap-2" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary " data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-square-fill"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <li><button class="dropdown-item" (click)="setBanFig(2.1)">Cuadrado</button></li>
+              <li><button class="dropdown-item" (click)="setBanFig(2.2)">Rectángulo</button></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="col-3">
+          <div class="btn-group d-grid gap-2" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary " data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-triangle-fill"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <li><button class="dropdown-item" (click)="setBanFig(3.1)">Equilátero</button></li>
+              <li><button class="dropdown-item" (click)="setBanFig(3.2)">Isóceles</button></li>
+              <li><button class="dropdown-item" (click)="setBanFig(3.3)">Escaleno</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-danger" (click)="clean()">
+              AC
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Input Parametros de formulas -->
+      <div class="mt-3">
+        <div *ngIf="banFig > 1">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Base</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" [(ngModel)]="base">
+          </div>
+
+          <div class="input-group mb-3" *ngIf="banFig > 3.1">
+            <span class="input-group-text" id="inputGroup-sizing-default">Lado</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" [(ngModel)]="lado1">
+          </div>
+
+          <div class="input-group mb-3" *ngIf="banFig > 3.2">
+            <span class="input-group-text" id="inputGroup-sizing-default">Lado</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" [(ngModel)]="lado2">
+          </div>
+
+          <div class="input-group mb-3" *ngIf="banFig > 2.1">
+            <span class="input-group-text" id="inputGroup-sizing-default">Altura</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" [(ngModel)]="altura">
+          </div>
+        </div>
+        <div class="input-group mb-3" *ngIf="banFig === 1">
+          <span class="input-group-text" id="inputGroup-sizing-default">Radio</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" [(ngModel)]="radio">
+        </div>
+      </div>
+
+      <!-- Botón para calcular resultado -->
+      <div class="row align-items-center mt-2" *ngIf="banFig !== 0">
+        <div class="d-grid gap-2">
+          <button type="button" class="btn btn-outline-primary" (click)="result()">=</button>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

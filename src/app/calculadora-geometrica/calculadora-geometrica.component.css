@@ -1,0 +1,19 @@
+#inArea, #inPer{
+    border: 0px solid #ced4da !important;
+    border-color: transparent !important;
+    color: #212529 !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+}
+
+
+#inputGroup-sizing-default{
+    background-color: transparent !important;
+    border-color: #0a58cb !important;
+    color: #0a58cb !important;
+}
+
+.form-control{
+    border-color: #0a58cb !important;
+    color: #2869ca !important;
+}
