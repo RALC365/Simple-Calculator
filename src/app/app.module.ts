@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { LayoutComponent } from './layout/layout.component';
 import { CalculadoraAritmetricaComponent } from './calculadora-aritmetrica/calculadora-aritmetrica.component';
 import { CalculadoraGeometricaComponent } from './calculadora-geometrica/calculadora-geometrica.component';
+import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CalculadoraGeometricaComponent } from './calculadora-geometrica/calcula
     HeaderComponent,
     LayoutComponent,
     CalculadoraAritmetricaComponent,
-    CalculadoraGeometricaComponent
+    CalculadoraGeometricaComponent,
+    NotFoundComponentComponent
   ],
   imports: [
     BrowserModule,

@@ -29,10 +29,6 @@ export class CalculadoraGeometricaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeFormula() {
-
-  }
-
   setBanFig(ban: number) {
     if(parseInt(this.banFig+"") !== parseInt(ban+"")){
       this.clean()
@@ -103,6 +99,10 @@ export class CalculadoraGeometricaComponent implements OnInit {
       default:
         console.log("Happy Code!")
         break;
+    }
+    if(isNaN(this.area) || isNaN(this.perimetro)){
+    this.area = 0
+      this.perimetro = 0
     }
   }
 
